@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>spiele-gui</title>
+    <link rel="stylesheet" href="spielegui.css">
+  </head>
+  <body>
+    <header id="header">
+
+    </header>
+    <main id="main">
+
+    </main>
+    <footer id="footer" class="expand">
+      <button type="button" id="expandbutton" onclick="footer.classList.toggle('expand')">
+        <span class="screenreaderonly expand">$expand</span>
+        <span class="screenreaderonly minimize">$minimize</span>
+        <img src="images/bar_open.svg" alt="">
+      </button>
+      <div id="expandables">
+        <button type="button" id="homebutton" onclick="location.href='start.html'">
+          <span class="screenreaderonly">$home</span>
+          <img src="images/bar_home.svg" alt="">
+        </button>
+        <button type="button" id="descriptionbutton">
+          <span class="screenreaderonly">$description</span>
+          <img src="images/bar_help.svg" alt="">
+        </button>
+        <!-- add level etc. here -->
+      </div>
+    </footer>
+    <script src="spielegui.js"></script>
+    <script src="audiospeaker.js"></script>
+  </body>
+</html>

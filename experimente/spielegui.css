@@ -1,0 +1,248 @@
+.screenreaderonly{
+  position: absolute;
+  width:1px;
+  height:1px;
+  overflow: hidden;
+  left:-1000px;
+}
+button {
+    cursor: grab;
+}
+/* does not work as intended, switches back on footer
+html, div, body, footer{
+  cursor: url("images/cursor.svg"), default;
+}
+*/
+/*
+#homebutton{
+  background-image: url('images/bar_home.svg');
+}
+#expandbutton{
+  background-image: url('images/bar_open.svg');
+}
+#descriptionbutton{
+  background-image: url('images/bar_help.svg');
+}
+.level_up{
+  background-image: url('images/bar_next.svg');
+}
+.level_down{
+  background-image: url('images/bar_previous.svg');
+}
+*/
+.levelcounter{
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  height: 100%;
+}
+.levelcounter button:disabled{
+  filter:grayscale(1);
+}
+
+.levelcounter_show{
+  font-size: xxx-large;
+}
+footer button{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: contain;
+  border:none;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 10vh;
+}
+
+#expandbutton{
+  z-index: 2;
+}
+
+#expandables{
+  width:100%;
+  height:100%;
+  transform: translate(-100%,0);
+  transition: transform 1s;
+  z-index: 1;
+}
+.expand #expandables{
+  transform: translate(0,0);
+}
+
+#expandables img{
+  height: 90%;
+}
+
+
+body{
+  display: grid;
+  grid-template-areas:"header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  height:100vh;
+  overflow: hidden;
+}
+
+
+#main{
+  display: grid;
+}
+
+button.pointcounterpoint {
+    width: 5ch;
+    height: 5ch;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 0.5ch;
+    background: whitesmoke;
+}
+
+button.pointcounterpoint.active {
+    background: black;
+}
+
+.pointcounter {
+    background: antiquewhite;
+    width: fit-content;
+    height: fit-content;
+}
+
+.dice img {height: 150%;}
+
+button.dice {
+    height: 4em;
+    overflow: hidden;
+    background: none;
+    border: none;
+    border-radius: 50%;
+}
+.virtualKeyboard.dices{
+  align-self: end;
+}
+
+div#congratwrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.virtualKeyboard.key {
+    text-align: center;
+    align-self: end;
+    box-shadow: 0px -21px 34px -19px black;
+    border-radius: 14px;
+}
+
+.virtualKeyboard button.key {
+    font-size: xxx-large;
+    text-transform: uppercase;
+    margin-right: 1ch;
+    margin-top: 1ch;
+}
+
+
+.audiobuttonwrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: start;
+}
+
+.audiobuttonwrapper .audiobutton{
+  text-align: right;
+}
+.audiobuttonwrapper .speakerbutton{
+  text-align: left;
+}
+
+.dialogwrapper{
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 11;
+}
+
+.dialog{
+  width:50vw;
+  height:50vh;
+  background: lightblue;
+  display: grid;
+  grid-template-areas: "title title" "body body" "prompt prompt" "cancel ok";
+  text-align: center;
+}
+
+.dialog h2{
+  background:blue;
+  color:white;
+  grid-area: title;
+  margin-top:0;
+  height:fit-content;
+}
+
+.dialog body{
+  grid-area: body;
+}
+.dialog input{
+  grid-area: prompt;
+  height: 1em;
+  font-size: xx-large;
+}
+
+.dialog button.ok{
+  grid-area: ok;
+  color: transparent;
+  background: url('images/bar_ok.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border:none;
+}
+.dialog button.cancel{
+  grid-area: cancel;
+  color: transparent;
+  background: url('images/cancel.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+
+.customdice img{
+    width:4em;
+    height:4em;
+    object-fit: contain;
+}
+.dice.customdice {
+  display: grid;
+  width:12em;
+  height:12em;
+  box-shadow: 1px 1px 1px 1px black;
+  border-radius: 0;
+  grid-template-areas: "d e a" "g . h" "b f c";
+}
+
+.dice.customdice.customdicemiddle{
+  grid-template-areas: "d f c" "i a h" "b g e";
+}
+
+.customdice img:nth-child(1){grid-area:a;}
+.customdice img:nth-child(2){grid-area:b;}
+.customdice img:nth-child(3){grid-area:c;}
+.customdice img:nth-child(4){grid-area:d;}
+.customdice img:nth-child(5){grid-area:e;}
+.customdice img:nth-child(6){grid-area:f;}
+.customdice img:nth-child(7){grid-area:g;}
+.customdice img:nth-child(8){grid-area:h;}
+.customdice img:nth-child(9){grid-area:i;}
