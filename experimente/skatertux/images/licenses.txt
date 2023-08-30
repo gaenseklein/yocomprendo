@@ -1,0 +1,4 @@
+All Images are either direct copys or derivates of images of the game SuperTux. As such they are licensed with GPL version 2 or later. 
+Original Authors of the image were created by grumbel or gwater. Check the log of SuperTux for details.
+
+

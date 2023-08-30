@@ -1,0 +1,174 @@
+#map {
+    position: relative;
+    width: 100vw;
+    height: 800px;
+    background: lightblue;
+    overflow: hidden;
+    border: 2px black;
+}
+
+#skatertux {
+    position: absolute;
+    z-index: 100;
+}
+
+.obstacle {
+  position: absolute;
+  left: 2000px;
+  bottom: 0px;
+  z-index: 10;
+}
+
+#countdown {
+  display: none;
+  position: absolute;
+  left: 45%;
+  top: 20%;
+  font-size: 100px;
+  color: #ff0000;
+  text-shadow: 2px 2px black;
+  font-family: monospace;
+  z-index: 100;
+}
+#countdown.active{
+  display: block;
+}
+#background {
+    width: 2000vw;
+    height:100%;
+    position: absolute;
+    left: 0px;
+    background-size: contain;
+    background-repeat-x: repeat;
+    z-index: 1;
+}
+#congratwrapper{
+  z-index: 1000;
+}
+
+
+/*levelcreator*/
+div#creator {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    background: lightblue;
+}
+
+div#creator.active {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+div#obstaclebar {
+    height: max-content;
+    width: 100vw;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 8px;
+}
+
+#obstaclebar button {
+    height: 7em;
+}
+
+#obstaclebar img {
+    height: 100%;
+}
+
+div#newlevelwrapper {
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+}
+#newlevel{
+  position: relative;
+  height:100%;
+  width:5000px;
+  background-size: contain;
+}
+
+#creator .obstacle.selected{
+  background: red;
+}
+#previewtux{
+  position: absolute;
+}
+div#endgame_screen img {
+    position: initial;
+}
+
+div#collectible_screen{
+  width: 100%;
+  display: grid;
+
+}
+
+div#endgame_screen {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    z-index: 1000;
+    justify-content: center;
+    grid-template-columns: 50vw;
+}
+
+div#endgame_clock_time {
+    display: inline-block;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px yellow;
+    margin-left: 50px;
+    width: 5ch;
+}
+
+#endgame_clock img{
+  height: 100px;
+  justify-self: end;
+}
+#endgame_clock {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  margin-top:100px;
+  margin-bottom:50px;
+}
+
+.obst-branch_right,
+.obst-branch_right2{
+  transform: scaleX(-1);
+}
+/*
+div#collectible_screen{
+    position: absolute;
+    top: 201px;
+    left: 30%;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+}
+*/
+/*
+div#collectible_end_screen {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(10, auto);
+}
+
+#endgame_screen .obst-coin{
+  grid-row: 2;
+}
+#endgame_screen .obst-star{
+  grid-row: 1;
+}
+#endgame_screen .obst-cd{
+  grid-row: 3;
+}
+*/
