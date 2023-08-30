@@ -1,0 +1,39 @@
+#main{
+  display: block;
+  overflow-y: auto;
+}
+.flipcard{
+  display: inline-block;
+  width: 20vh;
+  height: 20vh;
+  padding: 2vh;
+  background-color: #fff;
+  opacity: 1;
+  box-shadow: 5px 6px 12px 1px grey;
+  border-radius: 15px;
+  margin: 1ch;
+  transition-property: transform, background-color;
+  transition-duration: 1s, 200ms;
+  transition-delay: 10ms, 300ms;
+}
+
+.flipcard.downside{
+  background-color: #00f;
+  transform: rotateY(180deg);
+}
+
+.hideimages .flipcard.downside img{
+  /*display: none;*/
+  opacity: 0;
+}
+.flipcard.hidden{
+  opacity: 0;
+}
+
+.flipcard img{
+  height:100%;
+  width:100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 10ms 300ms;
+}

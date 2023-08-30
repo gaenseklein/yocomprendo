@@ -1,0 +1,68 @@
+.anlaute #main {
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.anlaute .audiobuttonwrapper.left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.anlaute .audiobuttonwrapper.right {
+    grid-column: 2;
+}
+
+.showComparisonWrapper{
+  position: absolute;
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  background:rgba(255,255,255,0.8);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+}
+
+.showComparisonWrapper > div {
+  background: white;
+  width: fit-content;
+  justify-self: center;
+  box-shadow: 1px 1px 20px -2px black;
+  padding:1ch;
+}
+
+.key{
+  color:blue;
+}
+
+.speakingkey .key{
+  color: red;
+  font-weight: bold;
+  font-size: xxx-large;
+}
+
+.title {
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+.audiobutton img{
+  height: 20vh;
+  filter: drop-shadow(2px 4px 6px black);
+  max-width: 25vh;
+  object-fit: contain;
+}
+
+.audiobutton{
+  height:100%;
+}
+
+.audiobuttonwrapper{
+  height: 30vh;
+}
+
+button{
+  background: none;
+  border: none;
+}

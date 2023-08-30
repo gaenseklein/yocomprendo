@@ -1,0 +1,10 @@
+div#question {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+div#question button {
+    border: none;
+    background: none;
+}
