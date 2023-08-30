@@ -1,0 +1,74 @@
+div#sudokufield {
+    display: grid;
+    grid-template-columns: repeat(9, 10ch);
+    grid-template-rows: repeat(9, 10ch);
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#sudokufield > div {
+    width: 9ch;
+    height: 9ch;
+    border: 1px solid;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+#sudokufield > div:nth-child(3n+3) {
+    border-right: 5px solid;
+}
+
+#sudokufield > div:nth-child(n+19):nth-child(-n+27),
+#sudokufield > div:nth-child(n+46):nth-child(-n+54),
+#sudokufield > div:nth-child(n+73){
+    border-bottom: 5px solid;
+}
+#sudokufield > div:nth-child(9n+1),
+#sudokufield > div:nth-child(9n+4),
+#sudokufield > div:nth-child(9n+7){
+    border-left: 5px solid;
+}
+#sudokufield > div:nth-child(-n+9),
+#sudokufield > div:nth-child(n+28):nth-child(-n+36),
+#sudokufield > div:nth-child(n+55):nth-child(-n+63){
+    border-top: 5px solid;
+}
+
+.prefilled {
+    background: lightblue;
+}
+
+.display {
+    font-size: xxx-large;
+}
+
+.numberbutton {
+    font-size: xxx-large;
+    margin: 5px;
+}
+
+.activeField {
+    background: lightgray;
+}
+.wrong{
+  background: red;
+}
+
+#pencil.active{
+  color: blue;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#buttons{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.filled .notes{
+  display: none;
+}
